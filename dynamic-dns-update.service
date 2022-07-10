@@ -1,0 +1,17 @@
+[Unit]
+Description= Dynamic DNS Update
+After=multi-user.target
+# Conflicts=getty@tty1.service
+
+[Service]
+Type=simple
+Environment=LOG_DIR=/var/log/
+Environment=CONF_DIR=/etc/
+ExecStart=/usr/bin/python3 /usr/local/bin/dynamic-dns.py
+StandardInput=tty-force
+Restart=always
+RestartSec=10
+StandardOutput=journal+console
+
+[Install]
+WantedBy=multi-user.target

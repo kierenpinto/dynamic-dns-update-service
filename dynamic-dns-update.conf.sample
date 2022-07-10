@@ -1,0 +1,3 @@
+[DEFAULT]
+ApiKey = ## INSERT API KEY HERE ##
+Domain = ## INSERT DOMAIN HERE ## #eg example.com
